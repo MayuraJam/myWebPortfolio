@@ -5,10 +5,13 @@ import profile from "./asset/image/profile.jpg";
 import Header from "./Heading";
 import experienceDetail from "./data/mockData.jsx";
 
-const AboutMeSection = () => {
+const ProjectSection = () => {
   return (
     <Box sx={{ padding: "40px", paddingBottom: "70px" }}>
-      <Header text="About Me" />
+      <Header text="Project" />
+      <Typography variant="h5" sx={{ color: colorTheme.woodBrown.main ,textAlign:"start",my:2}}>
+        A collection of projects, I've worked on.
+      </Typography>
       <Grid
         container
         spacing={5}
@@ -26,7 +29,7 @@ const AboutMeSection = () => {
             padding: 2,
             borderRadius: "15px",
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
-            background:"#FFFDF6"
+            background: "#FFFDF6",
           }}
         >
           <Box>
@@ -214,7 +217,6 @@ const AboutMeSection = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "start",
-            
           }}
         >
           <Box>
@@ -255,7 +257,11 @@ const AboutMeSection = () => {
                   variant="h5"
                   sx={{ color: colorTheme.woodBrown.main, fontWeight: "bold" }}
                 >
-                  <i class="bi bi-mortarboard" style={{marginRight:"8px"}}></i> Education 
+                  <i
+                    class="bi bi-mortarboard"
+                    style={{ marginRight: "8px" }}
+                  ></i>{" "}
+                  Education
                 </Typography>
                 <Divider variant="middle" sx={{ my: 2 }} />
                 <Typography
@@ -283,7 +289,6 @@ const AboutMeSection = () => {
                     border: `1px solid ${colorTheme.lightBrown.main}`,
                     display: "inline-block",
                     borderRadius: "15px",
-                    mt:2
                   }}
                 >
                   GPA : 3.71
@@ -305,7 +310,10 @@ const AboutMeSection = () => {
                   variant="h5"
                   sx={{ color: colorTheme.woodBrown.main, fontWeight: "bold" }}
                 >
-                  <i class="bi bi-person-workspace" style={{marginRight:"8px"}}></i>
+                  <i
+                    class="bi bi-person-workspace"
+                    style={{ marginRight: "8px" }}
+                  ></i>
                   experience
                 </Typography>
                 <Divider variant="middle" sx={{ my: 2 }} />
@@ -328,7 +336,7 @@ const AboutMeSection = () => {
                     </Typography>
                     <Typography
                       variant="h6"
-                      sx={{ color: colorTheme.lightBrown.main ,mb:2}}
+                      sx={{ color: colorTheme.lightBrown.main, mb: 2 }}
                     >
                       {item.timeline}
                     </Typography>
@@ -342,4 +350,4 @@ const AboutMeSection = () => {
     </Box>
   );
 };
-export default AboutMeSection;
+export default ProjectSection;

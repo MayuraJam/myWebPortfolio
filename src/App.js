@@ -10,6 +10,7 @@ import {
 import { colorTheme } from "./style/theme";
 import ProfileSection from "./component/profileSection";
 import AboutMeSection from "./component/aboutMeSection";
+import ProjectSection from "./component/ProjectSection";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Navbar />
         <ProfileSection/>
         <AboutMeSection/>
+        <ProjectSection/>
       </Box>
     </div>
   );
