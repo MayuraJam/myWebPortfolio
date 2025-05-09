@@ -42,7 +42,7 @@ const ProfileSection = () => {
             <Box
               sx={{
                 display: "flex",
-                alignItems: "center", // จัดให้รูปอยู่ตรงกลางแนวตั้ง
+                alignItems: "center", 
                 gap: 2,
               }}
             >

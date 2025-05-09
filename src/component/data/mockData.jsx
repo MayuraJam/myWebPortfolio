@@ -11,4 +11,5 @@ const experienceDetail = [
         timeline:"May 2024 - June 2024"
     }
 ]
+
 export default experienceDetail;

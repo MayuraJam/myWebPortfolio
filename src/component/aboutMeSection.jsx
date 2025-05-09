@@ -22,7 +22,6 @@ const AboutMeSection = () => {
           xs={12}
           sm={6}
           sx={{
-            // border: `1px solid ${colorTheme.lightBrown.main}`,
             padding: 2,
             borderRadius: "15px",
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
