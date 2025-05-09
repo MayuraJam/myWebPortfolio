@@ -1,15 +1,6 @@
 import { createTheme } from "@mui/material/styles";
-import { Noto_Sans, Noto_Sans_Thai } from "next/font/google";
 
-const noto = Noto_Sans({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-});
 
-const notoTH = Noto_Sans_Thai({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-});
 
 const { palette } = createTheme();
 
@@ -57,6 +48,24 @@ const colorTheme = {
   blackLightGreen: palette.augmentColor({
     color: { main: "#3F4F44" },
     name: "blackLightGreen",
+  }),
+  darkGrey: palette.augmentColor({
+    color: { main: "#5A5A5D" },
+    name: "darkGrey",
+  }),
+  darkBlueGrey: palette.augmentColor({
+    color: { main: "#636576" },
+    name: "darkBlueGrey",
+  }),
+
+  grey: palette.augmentColor({
+    color: { main: "#BEBEBF" },
+    name: "grey",
+  }),
+
+  lightGrey: palette.augmentColor({
+    color: { main: "#D9D9D9" },
+    name: "lightGrey",
   }),
 };
 
