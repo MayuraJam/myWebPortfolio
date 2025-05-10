@@ -3,19 +3,9 @@ import myLogo from "../component/asset/image/documents.png";
 import { colorTheme } from "../style/theme";
 import "./Navbar.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-scroll";
 
-import {
-  Box,
-  Button,
-  Typography,
-  TextField,
-  Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Autocomplete,
-} from "@mui/material";
+import { Button } from "@mui/material";
 
 const Navbar = () => {
   const [openList, setOpenList] = useState(false);
@@ -26,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <a href="#">
+        <Link to="profile" smooth={true} duration={500}>
           <img
             src={myLogo}
             alt={"logo image"}
@@ -38,28 +28,35 @@ const Navbar = () => {
               borderRadius: "100%",
             }}
           />
-        </a>
+        </Link>
         <div>
           <ul
             id="navbar-ul"
             className={openList ? "#navbar-ul active" : "#navbar-ul"}
           >
             <li>
-              <a href="#" className="active">
+              <Link
+                to="profile"
+                smooth={true}
+                duration={500}
+                className="active"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="about-me" smooth={true} duration={500}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <Link to="project" smooth={true} duration={500}>Projects</Link>
             </li>
             <li>
-              <a href="#">Skills</a>
+              <Link to="skills" smooth={true} duration={500}>Skills</Link>
             </li>
             <li>
-              <a href="#">Certificates</a>
+              <Link to="certificate" smooth={true} duration={500}>Certificates</Link>
             </li>
             <li>
               <Button
