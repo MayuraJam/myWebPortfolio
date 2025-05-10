@@ -5,6 +5,9 @@ nav {
   background: #a27b5c;
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  width: 90%;
+  z-index: 1000;
 }
 #navbar-ul {
   display: flex;
@@ -54,6 +57,17 @@ nav {
 
 
 @media screen and (max-width: 769px) {
+  nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #a27b5c;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  width: 80%;
+  z-index: 1000;
+}
   #navbar-ul {
     display: flex;
     flex-direction: column;

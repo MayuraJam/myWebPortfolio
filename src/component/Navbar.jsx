@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <Link to="profile" smooth={true} duration={500}>
+        <Link to="profile" smooth={true} duration={500} style={{cursor:"pointer"}}>
           <img
             src={myLogo}
             alt={"logo image"}

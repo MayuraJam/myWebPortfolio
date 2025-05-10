@@ -4,6 +4,7 @@ import { colorTheme } from "../style/theme";
 import githubImg from "./asset/image/icon/2048px-Octicons-mark-github.png";
 import emailImg from "./asset/image/icon/email.png";
 import teleImg from "./asset/image/icon/phone.png";
+import linkedInImg from "./asset/image/icon/linkedin.png";
 import laptopWithProgrammingImg from "./asset/image/icon/programming.png";
 import { Element } from "react-scroll";
 import IconButtonComponent from "./IconButton";
@@ -11,7 +12,7 @@ import IconButtonComponent from "./IconButton";
 const ProfileSection = () => {
   return (
     <Element name="profile">
-      <Box sx={{ padding: "110px" }} id="profile">
+      <Box sx={{ padding: "110px" ,paddingTop:"200px"}} id="profile">
         <Grid
           container
           spacing={2}
@@ -98,11 +99,29 @@ const ProfileSection = () => {
                   href="https://github.com/MayuraJam?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{textDecoration:"none"}}
                 >
                   <IconButtonComponent text="Github">
                     <img
                       src={githubImg}
                       alt={"github logo"}
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                      }}
+                    />
+                  </IconButtonComponent>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mayura-jampasri-5293652b1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  <IconButtonComponent text="Linkedin">
+                    <img
+                      src={linkedInImg}
+                      alt={"linkedIn logo"}
                       style={{
                         width: "20px",
                         height: "20px",

@@ -9,7 +9,7 @@ const FooterSction = () => {
   return (
     <footer
       style={{
-        background: colorTheme.woodBrown.main,
+        background: colorTheme.lightBrown.main,
         paddingRight: 4,
         paddingLeft: 4,
       }}

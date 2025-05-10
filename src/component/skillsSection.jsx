@@ -7,7 +7,7 @@ import { Element } from "react-scroll";
 const SkillsSection = () => {
   return (
     <Element name="skills"> 
-    <Box sx={{ padding: "40px", paddingBottom: "70px" }} id="skills">
+    <Box sx={{ padding: "40px", paddingBottom: "70px",paddingTop:"150px" }} id="skills">
       <Header text="Skills" />
       <Grid
         container

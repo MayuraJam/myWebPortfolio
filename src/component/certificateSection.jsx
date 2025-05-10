@@ -6,13 +6,16 @@ import { certificateData } from "./data/mockData";
 
 const CertificateSection = () => {
   return (
-    <Box sx={{ padding: "40px", paddingBottom: "70px" }} id="certificate">
+    <Box
+      sx={{ padding: "40px", paddingBottom: "70px", paddingTop: "150px" }}
+      id="certificate"
+    >
       <Header text="Certificate" />
       <Typography
         variant="h5"
         sx={{ color: colorTheme.woodBrown.main, textAlign: "start", my: 2 }}
       >
-       A collection of my certificatins earned throughout my journey.
+        A collection of my certifications earned throughout my journey.
       </Typography>
       <Grid
         container
@@ -71,7 +74,7 @@ const CertificateSection = () => {
                   textAlign: "start",
                 }}
               >
-               ({item.issueDate})
+                ({item.issueDate})
               </Typography>
               <Typography
                 variant="h6"
@@ -80,9 +83,9 @@ const CertificateSection = () => {
                   color: colorTheme.woodBrown.main,
                   textAlign: "center",
                   border: `1px solid ${colorTheme.lightBrown.main}`,
-                  borderRadius:"15px",
+                  borderRadius: "15px",
                   padding: 1,
-                  width:"220px"
+                  width: "220px",
                 }}
               >
                 {item.about}

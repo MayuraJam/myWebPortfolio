@@ -4,11 +4,14 @@ import { colorTheme } from "../style/theme";
 import profile from "./asset/image/profile.jpg";
 import Header from "./Heading";
 import { experienceDetail } from "./data/mockData";
-import { Element,Link } from "react-scroll";
+import { Element, Link } from "react-scroll";
 const AboutMeSection = () => {
   return (
     <Element name="about-me">
-      <Box sx={{ padding: "40px", paddingBottom: "70px" }} id="about-me">
+      <Box
+        sx={{ padding: "40px", paddingBottom: "70px", paddingTop: "150px" }}
+        id="about-me"
+      >
         <Header text="About Me" />
         <Grid
           container
@@ -186,7 +189,12 @@ const AboutMeSection = () => {
                   mt: 2,
                 }}
               >
-                <Link to="skills" style={{ textDecoration: "none" }} smooth={true} duration={500}>
+                <Link
+                  to="skills"
+                  style={{ textDecoration: "none" }}
+                  smooth={true}
+                  duration={500}
+                >
                   <Typography
                     sx={{
                       padding: 1.5,

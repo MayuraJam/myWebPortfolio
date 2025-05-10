@@ -28,15 +28,6 @@ function App() {
         <SkillsSection />
         <CertificateSection />
         <FooterSction />
-        {/* <Router>
-          <Routes>
-            <Route path="/" element={<ProfileSection />}/>
-            <Route path="/about" element={<AboutMeSection />}/>
-            <Route path="/projects" element={<ProjectSection />}/>
-            <Route path="/skils" element={<SkillsSection />}/>
-            <Route path="/certificates" element={<CertificateSection />}/>
-          </Routes>
-        </Router> */}
       </Box>
     </div>
   );
