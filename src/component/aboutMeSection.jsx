@@ -1,11 +1,23 @@
 import { Box, Typography, Grid, Button, Divider } from "@mui/material";
-import React from "react";
+import {React,useState} from "react";
 import { colorTheme } from "../style/theme";
 import profile from "./asset/image/profile.jpg";
 import Header from "./Heading";
 import { experienceDetail } from "./data/mockData";
 import { Element, Link } from "react-scroll";
+import transcriptFile from "./asset/file/My_transcript_eng.pdf";
+import { NotificationDialog } from "./dialog/notificationDialog";
 const AboutMeSection = () => {
+    const [openList, setOpenList] = useState(false);
+    const [openDownloadNoti,setOpenDownloadNoti] = useState(false);
+
+    const handleOpenDownloadNoti = ()=>{
+    setOpenDownloadNoti(true);
+  }
+  const handleCloseDownLoadNoti = (event,reason)=>{
+    if(reason === "clickaway") return;
+    setOpenDownloadNoti(false);
+  }
   return (
     <Element name="about-me">
       <Box
@@ -232,7 +244,7 @@ const AboutMeSection = () => {
                 variant="h5"
                 sx={{ color: colorTheme.woodBrown.main }}
               >
-                I'm Mayura Jampasri I graduated from Kasetsart University <br />{" "}
+               " I'm <span style={{ fontWeight: "bold" }}> Mayura Jampasri</span> I graduated from Kasetsart University <br />{" "}
                 with a degree in{" "}
                 <span style={{ fontWeight: "bold" }}>
                   Information Technology
@@ -241,7 +253,7 @@ const AboutMeSection = () => {
                 <br /> I'm currently learning and practice web development{" "}
                 <br />
                 and looking forward to becoming a{" "}
-                <span style={{ fontWeight: "bold" }}>junior developer</span>.
+                <span style={{ fontWeight: "bold" }}>junior developer</span>."
               </Typography>
               <Grid
                 container
@@ -310,10 +322,32 @@ const AboutMeSection = () => {
                       display: "inline-block",
                       borderRadius: "15px",
                       mt: 2,
+                      fontWeight:"bold"
                     }}
                   >
                     GPA : 3.71
                   </Typography>
+                  <a
+                    href={transcriptFile}
+                    download="My-Transcript"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      size="large"
+                      variant="contained"
+                      id="resume-button"
+                      sx={{
+                        borderRadius: "25px",
+                        color: colorTheme.lightPink.main,
+                        fontWeight: "bold",
+                        background: colorTheme.greenleft.main,
+                        mt:3
+                      }}
+                      onClick={handleOpenDownloadNoti}
+                    >
+                      Transcript
+                    </Button>
+                  </a>
                 </Grid>
                 <Grid
                   item
@@ -371,6 +405,12 @@ const AboutMeSection = () => {
             </Box>
           </Grid>
         </Grid>
+      <NotificationDialog
+      open={openDownloadNoti} 
+      handleClose={handleCloseDownLoadNoti} 
+      massage="Download Transcript sucess !!!"
+      status="success"
+      />
       </Box>
     </Element>
   );

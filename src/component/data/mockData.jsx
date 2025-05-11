@@ -158,7 +158,7 @@ export const certificateData = [
     certificateImage: "/image/certificate/BBVC2.png",
     issueDate: "15 Nov 2024 - 15 Apil 2025",
     organization: "Bluebik Vulcan Company Limited",
-    about: "Intern",
+    about: "Internship",
   },
   {
     certificateId: 2,
@@ -174,7 +174,7 @@ export const certificateData = [
     certificateImage: "/image/certificate/BBVC1.png",
     issueDate: "1 May 2024 - 28 June 2024",
     organization: "Bluebik Vulcan Company Limited",
-    about: "Intern",
+    about: "Internship",
   },{
     certificateId: 4,
     certificateName: "ICDL certificate",
