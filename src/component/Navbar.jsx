@@ -55,7 +55,7 @@ const Navbar = () => {
                 to="profile"
                 smooth={true}
                 duration={500}
-                className="active"
+                // className="active"
               >
                 Home
               </Link>

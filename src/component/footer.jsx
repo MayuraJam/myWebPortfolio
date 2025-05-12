@@ -1,67 +1,145 @@
 import { Box, Typography, Grid, Button, Divider } from "@mui/material";
+import "./footer.css";
 import React from "react";
 import { colorTheme } from "../style/theme";
-import githubImg from "./asset/image/icon/2048px-Octicons-mark-github.png";
-import emailImg from "./asset/image/icon/email.png";
-import teleImg from "./asset/image/icon/phone.png";
+import myLogo from "./asset/image/documents.png";
+import { Link } from "react-scroll";
+import IconButtonComponent from "./IconButton";
 
 const FooterSction = () => {
   return (
     <footer
       style={{
         background: colorTheme.lightBrown.main,
-        paddingRight: 4,
-        paddingLeft: 4,
+        padding: "50px",
       }}
     >
-      <Grid container spacing={5} sx={{ padding: 3 }}>
-        <Grid item xs={12} sm={6}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            sm: "column",
+            md: "row",
+          },
+          justifyContent: {
+            xs: "center",
+            sm: "center",
+            md: "space-between",
+          },
+          alignItems: {
+            xs: "center",
+            sm: "center",
+            md: "flex-start",
+          },
+          width: "100%",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: {
+              xs: "center",
+              sm: "center",
+              md: "start",
+            },
+          }}
+        >
+          <Link
+            to="profile"
+            smooth={true}
+            duration={500}
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              src={myLogo}
+              alt={"logo image"}
+              style={{
+                width: "48px",
+                height: "48px",
+                marginBottom: 4,
+                borderRadius: "100%",
+                border: `5px solid ${colorTheme.cream.main}`,
+              }}
+            />
+          </Link>
           <Typography
             variant="h5"
             sx={{
-              color: colorTheme.cream.main,
+              color: colorTheme.lightPink.main,
+              lineHeight: "3rem",
               fontWeight: "bold",
             }}
-
           >
-            About us
+            Mayura Jampasri
           </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: colorTheme.sakuraPink.main,
+            }}
+          >
+            "A little progress each day adds up to big results."
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: {
+              xs: "center",
+              sm: "center",
+              md: "end",
+            },
+          }}
+        >
+          <Box sx={{ display: "flex", gap: 3, mt: 2 }}>
+            <a
+              href="https://github.com/MayuraJam?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <IconButtonComponent text="Github">
+                <i class="bi bi-github icon-contect"></i>
+              </IconButtonComponent>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mayura-jampasri-5293652b1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <IconButtonComponent text="Linkedin">
+                <i class="bi bi-linkedin icon-contect"></i>
+              </IconButtonComponent>
+            </a>
+            <IconButtonComponent text="maimayura37620@gmail.com">
+              <i class="bi bi-envelope icon-contect"></i>
+            </IconButtonComponent>
+            <IconButtonComponent text="0909845033">
+              <i class="bi bi-telephone-fill icon-contect"></i>
+            </IconButtonComponent>
+          </Box>
+          <Divider
+            sx={{
+              borderColor: colorTheme.lightPink.main,
+              my: 2,
+              width: "100%",
+            }}
+          />
           <Typography
             variant="p"
             sx={{
               color: colorTheme.lightPink.main,
-              mb: 2,
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            voluptatibus nam maxime error veritatis, quo facilis sunt culpa
-            nostrum cupiditate dolore dolores possimus ratione fugiat non sit
-            harum et natus.
+            © 2025 Mayura Jampasri | Built with React MUI and CSS
           </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Typography
-            variant="h5"
-            sx={{
-              color: colorTheme.cream.main,
-              fontWeight: "bold",
-            }}
-          >
-            Contact us
-          </Typography>
-          <ul>
-            <li>
-              <a style={{}}>1</a>
-            </li>
-            <li>
-              <a>2</a>
-            </li>
-            <li>
-              <a>3</a>
-            </li>
-          </ul>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </footer>
   );
 };
