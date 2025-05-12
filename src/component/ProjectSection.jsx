@@ -6,6 +6,7 @@ import githubImg from "./asset/image/icon/2048px-Octicons-mark-github.png";
 import { Element } from "react-scroll";
 import { projectData } from "./data/mockData";
 import { ProjectDialog } from "./dialog/ProjectDialog";
+import emptyImage from "./asset/image/icon/empty_img.png";
 
 const ProjectSection = () => {
   const [openProjectDialog, setOpenProjectDialog] = useState(false);
@@ -19,6 +20,10 @@ const ProjectSection = () => {
     setOpenProjectDialog(false);
     setSelectId(null);
   };
+
+  const truncateText = (text,maxLength)=>{
+    return text.length > maxLength ? text.substring(0,maxLength)+"...":text;
+  }
   return (
     <Element name="project">
       <Box
@@ -32,7 +37,12 @@ const ProjectSection = () => {
         <Header text="Project" />
         <Typography
           variant="h5"
-          sx={{ color: colorTheme.woodBrown.main, textAlign: "start", my: 2 }}
+          sx={{
+            color: colorTheme.woodBrown.main,
+            textAlign: "start",
+            my: 2,
+            fontFamily: "'Share Tech', sans-serif",
+          }}
         >
           Here are some projects I've worked on, showcasing my skills in various
           technologies and problem domains.
@@ -51,13 +61,12 @@ const ProjectSection = () => {
               xs={12}
               sm={6}
               key={item.projectId}
-              onClick={()=>handleOpenProjectDialog(item)}
+              onClick={() => handleOpenProjectDialog(item)}
               sx={{
                 padding: 2,
                 borderRadius: "15px",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
                 background: "#FFFDF6",
-                border: "1px solid transparent",
+                border: `1px solid ${colorTheme.lightGrey.main}`,
                 transition: "all 0.3s ease",
                 width: "600px",
                 cursor: "pointer",
@@ -75,6 +84,7 @@ const ProjectSection = () => {
                     color: colorTheme.woodBrown.main,
                     fontWeight: "bold",
                     textAlign: "start",
+                    fontFamily: "'Share Tech', sans-serif",
                   }}
                 >
                   {item.projectName}
@@ -82,13 +92,14 @@ const ProjectSection = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    lineHeight: "1rem",
+                    lineHeight: "1.2rem",
                     color: colorTheme.woodBrown.main,
                     mb: 3,
                     textAlign: "start",
+                    fontFamily: "'Share Tech', sans-serif",
                   }}
                 >
-                  {item.projectDescription}
+                  {truncateText(item.projectDescription,200)}
                 </Typography>
                 <Box
                   sx={{
@@ -109,6 +120,7 @@ const ProjectSection = () => {
                         border: `1px solid ${colorTheme.greenleft.main}`,
                         padding: "5px 10px",
                         transition: "all 0.3s ease",
+                        fontFamily: "'Share Tech', sans-serif",
                         "&:hover": {
                           backgroundColor: colorTheme.greenleft.main,
                           color: "#ffffff",
@@ -126,6 +138,7 @@ const ProjectSection = () => {
                     rel="noopener noreferrer"
                     sx={{
                       transition: "all 0.3s ease",
+                      fontFamily: "'Share Tech', sans-serif",
                       visibility: item.link === "-" ? "hidden" : "visible",
                       "&:hover": {
                         border: colorTheme.greenleft.main,
@@ -145,7 +158,7 @@ const ProjectSection = () => {
                   </Button>
                   <Box sx={{ position: "relative", display: "inline-block" }}>
                     <img
-                      src={item.projectImage[0]}
+                      src={item.projectImage[0]?item.projectImage[0]:emptyImage}
                       alt={"profile image"}
                       style={{
                         width: "560px",
@@ -171,6 +184,7 @@ const ProjectSection = () => {
                         position: "absolute",
                         top: 30,
                         right: 45,
+                        fontFamily: "'Share Tech', sans-serif",
                       }}
                     >
                       {item.projectType}
@@ -182,11 +196,11 @@ const ProjectSection = () => {
           ))}
         </Grid>
       </Box>
-          <ProjectDialog
-            open={openProjectDialog}
-            onClose={handleCloseProjectDialog}
-            data={selectId}
-          />
+      <ProjectDialog
+        open={openProjectDialog}
+        onClose={handleCloseProjectDialog}
+        data={selectId}
+      />
     </Element>
   );
 };

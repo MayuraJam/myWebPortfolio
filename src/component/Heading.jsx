@@ -9,12 +9,11 @@ const Header = ({ text }) => {
         sx={{
           fontWeight: "bold",
           color: colorTheme.woodBrown.main,
-          textAlign:"start"
+          textAlign: "start",
+          fontFamily: "'Share Tech', sans-serif"
         }}
       >
-        {text} <span style={{color:colorTheme.greenleft.main}}>
-          {">>"}
-        </span>
+        {text} <span style={{ color: colorTheme.greenleft.main }}>{">>"}</span>
       </Typography>
     </>
   );

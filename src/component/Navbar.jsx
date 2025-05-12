@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { Snackbar,Alert } from "@mui/material";
-import myLogo from "../component/asset/image/documents.png";
+import myLogo from "../component/asset/image/icon/my-logo.png";
 import { colorTheme } from "../style/theme";
 import "./Navbar.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -37,10 +36,9 @@ const Navbar = () => {
             src={myLogo}
             alt={"logo image"}
             style={{
-              width: "48px",
-              height: "48px",
+              width: "55px",
+              height: "55px",
               marginBottom: 4,
-              border: `5px solid ${colorTheme.cream.main}`,
               borderRadius: "100%",
             }}
           />
@@ -55,7 +53,6 @@ const Navbar = () => {
                 to="profile"
                 smooth={true}
                 duration={500}
-                // className="active"
               >
                 Home
               </Link>

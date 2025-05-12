@@ -50,9 +50,9 @@ export const skills = [
     skillType: "Tools & Technologies",
     skillIcon: "/image/skillIcon/cpu.png",
     skillList: [
-      "Git(Basic)",
+      "Git (Basic)",
       "PostMan",
-      "Docker(Basic)",
+      "Docker (Basic)",
       "Figma",
       "Erdplus",
       "draw.io",
@@ -78,9 +78,10 @@ export const projectData = [
   {
     projectId: 1,
     projectName: "MockMYKU  (practice project)",
-    projectDescription: "test description",
+    projectDescription:
+      "This Project is a mock version inspired from MYKU website, which is the official platform by Kasetsart University to manage student data. The main features include course registration and grade display. In this project , the course registration feature has been replicated . This is a prctice project for data management using MongoDB and API development with Node.js.",
     role: "Backend developer",
-    tools: ["Express.Js", "MongoDB", "NodeJs"],
+    tools: ["Express.Js", "MongoDB", "NodeJs", "ORM (mongoose)"],
     projectType: "Rest API",
     projectImage: [
       "/image/project1/1.png",
@@ -91,12 +92,13 @@ export const projectData = [
       "/image/project1/11.png",
     ],
     link: "https://github.com/MayuraJam/mockMyKU_app_API",
-    timeline :"20 Apil 2025 - present"
+    timeline: "20 Apil 2025 - present",
   },
   {
     projectId: 2,
     projectName: "Japanease resturant system",
-    projectDescription: "test description",
+    projectDescription:
+      "This project is a website about ordering food and beverages within a Japanese restaurant. The platform includes feature for both customers and staff (kitchen staff , cashier staff). For customer core feature include (Menu selection , ordering display , Payment , Point and member) and For staft core feature include (Approving customer orders , manageing orders , managing menu). This is my first university project with full-scale web based mnagement system.",
     role: "front end developer",
     tools: ["React.Js", "JavaScript", "Bootstrap"],
     projectType: "Website application",
@@ -109,14 +111,15 @@ export const projectData = [
       "/image/project2/action_modal.png",
     ],
     link: "https://github.com/MayuraJam/japanese_restaurant_app",
-    timeline :"8 July 2024 - 4 Nov 2024"
+    timeline: "8 July 2024 - 4 Nov 2024",
   },
   {
     projectId: 3,
     projectName: "Japanease resturant system",
-    projectDescription: "test description",
+    projectDescription:
+      "This project is the server site for a Japanease resturant system. The API is divided into three main controllers : Customer , staff and Authentication. Within the controllers, there are various service including Get a list food and beverage menu item , Adding and update menu items , Create and cancel current order, Display table information to check table status , Managing the payment system , Managibg the point and membership system , Update the status of orders, Authentication system. This API service with connected SQL database to support system.",
     role: "back end developer",
-    tools: ["C# .net", "SQL server"],
+    tools: ["C# .net", "SQL server", "ORM (dapper)"],
     projectType: "Rest API",
     projectImage: [
       "/image/project3/apiResturant1.png",
@@ -128,12 +131,12 @@ export const projectData = [
       "/image/project3/apiResturant7.png",
     ],
     link: "https://github.com/MayuraJam/japanese_restaurant_api/tree/main/basic_JWT_project",
-    timeline :"8 July 2024 - 4 Nov 2024"
+    timeline: "8 July 2024 - 4 Nov 2024",
   },
   {
     projectId: 4,
     projectName: "Flea Market lock booking system",
-    projectDescription: "test description",
+    projectDescription: "This program is develop for use on the Window OS.It is a system for managing flea market booking system. this progeram have two user role (staff and flea maket owner). For staff core feature include (Manageing vendor information , Reserving flear market (performed by staff) , Viewing all reservation records , Payment system , Managing fines) and  flea maket owner core feature include (Checking vendor information , Viewing all reservation records , Managing flea market data). This program is use by authorized staff only.",
     role: "developer",
     tools: ["C# window app", "SQL server"],
     projectType: "desktop application",
@@ -147,7 +150,7 @@ export const projectData = [
       "/image/project4/lockStatusDashboard.png",
     ],
     link: "-",
-    timeline :"19 Aug 2023 - 11 Oct 2023"
+    timeline: "19 Aug 2023 - 11 Oct 2023",
   },
 ];
 
@@ -164,7 +167,7 @@ export const certificateData = [
     certificateId: 2,
     certificateName: "API Design and Cloud Architecture using Python  ",
     certificateImage: "/image/certificate/240919_213222.jpg",
-    issueDate: "7 Sep 20254 - 8 Sep 20254",
+    issueDate: "7 Sep 2024 - 8 Sep 2024",
     organization: "Kasetsart University (faculty of Engineering Sriracha) ",
     about: "Workshop and training",
   },
@@ -175,7 +178,8 @@ export const certificateData = [
     issueDate: "1 May 2024 - 28 June 2024",
     organization: "Bluebik Vulcan Company Limited",
     about: "Internship",
-  },{
+  },
+  {
     certificateId: 4,
     certificateName: "ICDL certificate",
     certificateImage: "/image/certificate/ICDLcer.png",

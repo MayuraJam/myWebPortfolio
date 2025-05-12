@@ -1,8 +1,7 @@
 import { Box, Typography, Grid, Button, Divider } from "@mui/material";
 import "./footer.css";
-import React from "react";
 import { colorTheme } from "../style/theme";
-import myLogo from "./asset/image/documents.png";
+import myLogo from "./asset/image/icon/my-logo.png";
 import { Link } from "react-scroll";
 import IconButtonComponent from "./IconButton";
 
@@ -56,11 +55,10 @@ const FooterSction = () => {
               src={myLogo}
               alt={"logo image"}
               style={{
-                width: "48px",
-                height: "48px",
+                width: "55px",
+                height: "55px",
                 marginBottom: 4,
                 borderRadius: "100%",
-                border: `5px solid ${colorTheme.cream.main}`,
               }}
             />
           </Link>
@@ -70,6 +68,7 @@ const FooterSction = () => {
               color: colorTheme.lightPink.main,
               lineHeight: "3rem",
               fontWeight: "bold",
+              fontFamily: "'Share Tech', sans-serif"
             }}
           >
             Mayura Jampasri
@@ -78,6 +77,7 @@ const FooterSction = () => {
             variant="h6"
             sx={{
               color: colorTheme.sakuraPink.main,
+              fontFamily: "'Share Tech', sans-serif"
             }}
           >
             "A little progress each day adds up to big results."
@@ -134,6 +134,7 @@ const FooterSction = () => {
             variant="p"
             sx={{
               color: colorTheme.lightPink.main,
+              fontFamily: "'Share Tech', sans-serif"
             }}
           >
             © 2025 Mayura Jampasri | Built with React MUI and CSS

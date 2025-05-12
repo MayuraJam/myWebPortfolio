@@ -7,6 +7,7 @@ import { experienceDetail } from "./data/mockData";
 import { Element, Link } from "react-scroll";
 import transcriptFile from "./asset/file/My_transcript_eng.pdf";
 import { NotificationDialog } from "./dialog/notificationDialog";
+import emptyImage from "./asset/image/icon/empty_img.png";
 const AboutMeSection = () => {
     const [openList, setOpenList] = useState(false);
     const [openDownloadNoti,setOpenDownloadNoti] = useState(false);
@@ -47,7 +48,7 @@ const AboutMeSection = () => {
           >
             <Box>
               <img
-                src={profile}
+                src={profile?profile:emptyImage}
                 alt={"profile image"}
                 style={{
                   width: "200px",
@@ -62,6 +63,7 @@ const AboutMeSection = () => {
                   lineHeight: "5rem",
                   color: colorTheme.woodBrown.main,
                   fontWeight: "bold",
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 Mayura Jampasri
@@ -72,6 +74,7 @@ const AboutMeSection = () => {
                   lineHeight: "1rem",
                   color: colorTheme.woodBrown.main,
                   mb: 3,
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 Information Technology student
@@ -93,6 +96,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                    fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -109,6 +113,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                     fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -125,6 +130,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                     fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -152,6 +158,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                     fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -168,6 +175,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                     fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -184,6 +192,7 @@ const AboutMeSection = () => {
                     color: colorTheme.greenleft.main,
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     transition: "all 0.3s ease",
+                     fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -215,6 +224,7 @@ const AboutMeSection = () => {
                       color: colorTheme.greenleft.main,
                       border: `1px solid ${colorTheme.greenleft.main}`,
                       transition: "all 0.3s ease",
+                       fontFamily: "'Share Tech', sans-serif",
                       "&:hover": {
                         backgroundColor: colorTheme.greenleft.main,
                         color: "#ffffff",
@@ -284,6 +294,7 @@ const AboutMeSection = () => {
                     sx={{
                       color: colorTheme.woodBrown.main,
                       fontWeight: "bold",
+                       fontFamily: "'Share Tech', sans-serif",
                     }}
                   >
                     <i
@@ -298,13 +309,15 @@ const AboutMeSection = () => {
                     sx={{
                       color: colorTheme.woodBrown.main,
                       fontWeight: "bold",
+                       fontFamily: "'Share Tech', sans-serif",
                     }}
                   >
                     BSc in Information Technology
                   </Typography>
                   <Typography
                     variant="h6"
-                    sx={{ color: colorTheme.lightBrown.main }}
+                    sx={{ color: colorTheme.lightBrown.main ,
+                      fontFamily: "'Share Tech', sans-serif", }}
                   >
                     Kasetsart University (Sriracha campus)
                   </Typography>
@@ -366,6 +379,7 @@ const AboutMeSection = () => {
                     sx={{
                       color: colorTheme.woodBrown.main,
                       fontWeight: "bold",
+                       fontFamily: "'Share Tech', sans-serif",
                     }}
                   >
                     <i
@@ -382,13 +396,16 @@ const AboutMeSection = () => {
                         sx={{
                           color: colorTheme.woodBrown.main,
                           fontWeight: "bold",
+                           fontFamily: "'Share Tech', sans-serif",
                         }}
                       >
                         {item.role}
                       </Typography>
                       <Typography
                         variant="h6"
-                        sx={{ color: colorTheme.lightBrown.main }}
+                        sx={{ color: colorTheme.lightBrown.main 
+                          , fontFamily: "'Share Tech', sans-serif",
+                        }}
                       >
                         {item.company}
                       </Typography>

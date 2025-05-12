@@ -12,7 +12,7 @@ import IconButtonComponent from "./IconButton";
 const ProfileSection = () => {
   return (
     <Element name="profile">
-      <Box sx={{ padding: "110px" ,paddingTop:"200px"}} id="profile">
+      <Box sx={{ padding: "110px", paddingTop: "200px" }} id="profile">
         <Grid
           container
           spacing={2}
@@ -24,19 +24,24 @@ const ProfileSection = () => {
             <Box sx={{ textAlign: "start" }}>
               <Typography
                 variant="h5"
-                sx={{ lineHeight: "5rem", color: colorTheme.woodBrown.main }}
+                sx={{
+                  lineHeight: "5rem",
+                  color: colorTheme.woodBrown.main,
+                  fontFamily: "'Share Tech', sans-serif",
+                }}
               >
                 Hello! I'm
               </Typography>
               <Typography
                 variant="h1"
-                sx={{ fontWeight: "bold", lineHeight: "4.5rem" }}
+                sx={{ fontWeight: "bold", lineHeight: "4.5rem",fontFamily: "'Share Tech', sans-serif" }}
               >
                 Mayura{" "}
                 <span
                   style={{
                     textDecoration: "underline",
                     color: colorTheme.greenleft.main,
+                    fontFamily: "'Share Tech', sans-serif"
                   }}
                 >
                   Jampasri
@@ -55,6 +60,7 @@ const ProfileSection = () => {
                     lineHeight: "6rem",
                     fontWeight: "light",
                     color: colorTheme.woodBrown.main,
+                    fontFamily: "'Share Tech', sans-serif"
                   }}
                 >
                   Information Technology Student
@@ -74,6 +80,7 @@ const ProfileSection = () => {
                   lineHeight: "5rem",
                   fontWeight: "light",
                   color: colorTheme.woodBrown.main,
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 Welcome to my Portfolio website
@@ -91,6 +98,7 @@ const ProfileSection = () => {
                     borderRadius: "10px",
                     maxWidth: "90px",
                     color: colorTheme.lightPink.main,
+                    fontFamily: "'Share Tech', sans-serif"
                   }}
                 >
                   Contact Me
@@ -99,7 +107,7 @@ const ProfileSection = () => {
                   href="https://github.com/MayuraJam?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{textDecoration:"none"}}
+                  style={{ textDecoration: "none" }}
                 >
                   <IconButtonComponent text="Github">
                     <img
@@ -116,7 +124,7 @@ const ProfileSection = () => {
                   href="https://www.linkedin.com/in/mayura-jampasri-5293652b1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{textDecoration:"none"}}
+                  style={{ textDecoration: "none" }}
                 >
                   <IconButtonComponent text="Linkedin">
                     <img
@@ -152,9 +160,6 @@ const ProfileSection = () => {
               </Box>
             </Box>
           </Grid>
-          {/* <Grid item xs={12} sm={6}>
-          <Typography variant="h5">ส่วนที่ 2</Typography>
-        </Grid> */}
         </Grid>
       </Box>
     </Element>

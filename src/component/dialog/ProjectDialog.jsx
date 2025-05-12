@@ -6,7 +6,6 @@ import {
   Typography,
   Dialog,
   DialogTitle,
-  DialogContentText,
   DialogContent,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -15,6 +14,7 @@ import profile from "../asset/image/profile.jpg";
 import githubImg from "../asset/image/icon/2048px-Octicons-mark-github.png";
 import { BtnSlider } from "./BtnSlider";
 import { Dots } from "./Dots";
+import emptyImage from "../asset/image/icon/empty_img.png";
 
 export const ProjectDialog = ({ open, onClose, data }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -59,6 +59,7 @@ export const ProjectDialog = ({ open, onClose, data }) => {
           sx={{
             color: colorTheme.lightBrown.main,
             textAlign: "start",
+            fontFamily: "'Share Tech', sans-serif"
           }}
         >
           {data.timeline}
@@ -106,20 +107,22 @@ export const ProjectDialog = ({ open, onClose, data }) => {
                 color: colorTheme.woodBrown.main,
                 fontWeight: "bold",
                 textAlign: "start",
+                fontFamily: "'Share Tech', sans-serif"
               }}
             >
-              {data.projectName}
+              {data.projectName} 
             </Typography>
             <Typography
               variant="h6"
               sx={{
-                lineHeight: "1rem",
+                lineHeight: "1.5rem",
                 color: colorTheme.lightBrown.main,
                 mb: 3,
                 textAlign: "start",
+                fontFamily: "'Share Tech', sans-serif",
               }}
             >
-              {data.projectDescription}
+            {data.projectDescription}
             </Typography>
             <Box
               sx={{
@@ -139,6 +142,7 @@ export const ProjectDialog = ({ open, onClose, data }) => {
                     border: `1px solid ${colorTheme.greenleft.main}`,
                     padding: "5px 10px",
                     transition: "all 0.3s ease",
+                    fontFamily: "'Share Tech', sans-serif",
                     "&:hover": {
                       backgroundColor: colorTheme.greenleft.main,
                       color: "#ffffff",
@@ -186,6 +190,7 @@ export const ProjectDialog = ({ open, onClose, data }) => {
               sx={{
                 color: colorTheme.lightBrown.main,
                 textAlign: "start",
+                fontFamily: "'Share Tech', sans-serif"
               }}
             >
               {data.role}
@@ -195,6 +200,7 @@ export const ProjectDialog = ({ open, onClose, data }) => {
               sx={{
                 color: colorTheme.lightBrown.main,
                 textAlign: "start",
+                fontFamily: "'Share Tech', sans-serif"
               }}
             >
               {data.projectType}
@@ -238,7 +244,7 @@ export const ProjectDialog = ({ open, onClose, data }) => {
                   }}
                 >
                   <img
-                    src={item}
+                    src={item?item:emptyImage}
                     alt={"project image slice"}
                     style={{
                       width: "650px",

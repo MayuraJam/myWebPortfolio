@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import Navbar from "./component/Navbar";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 import { colorTheme } from "./style/theme";
 import ProfileSection from "./component/profileSection";

@@ -3,6 +3,7 @@ import React from "react";
 import { colorTheme } from "../style/theme";
 import Header from "./Heading";
 import { certificateData } from "./data/mockData";
+import emptyImage from "./asset/image/icon/empty_img.png";
 
 const CertificateSection = () => {
   return (
@@ -13,7 +14,11 @@ const CertificateSection = () => {
       <Header text="Certificate" />
       <Typography
         variant="h5"
-        sx={{ color: colorTheme.woodBrown.main, textAlign: "start", my: 2 }}
+        sx={{ color: colorTheme.woodBrown.main, 
+          textAlign: "start",
+           my: 2 ,
+          fontFamily: "'Share Tech', sans-serif"
+          }}
       >
         A collection of my certifications earned throughout my journey.
       </Typography>
@@ -34,12 +39,15 @@ const CertificateSection = () => {
             sx={{
               padding: 2,
               borderRadius: "15px",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
               background: "#FFFDF6",
               border: "1px solid transparent",
               transition: "all 0.3s ease",
               width: "600px",
-              border: `1px solid ${colorTheme.greenleft.main}`,
+              border: `1px solid ${colorTheme.lightGrey.main}`,
+              "&:hover": {
+                border: `1px solid ${colorTheme.greenleft.main}`,
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
+              },
             }}
           >
             <Box>
@@ -50,6 +58,7 @@ const CertificateSection = () => {
                   color: colorTheme.woodBrown.main,
                   fontWeight: "bold",
                   textAlign: "start",
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 {item.certificateName}
@@ -61,6 +70,7 @@ const CertificateSection = () => {
                   color: colorTheme.lightBrown.main,
                   mb: 3,
                   textAlign: "start",
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 {item.organization}
@@ -72,6 +82,7 @@ const CertificateSection = () => {
                   color: colorTheme.lightBrown.main,
                   mb: 3,
                   textAlign: "start",
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 ({item.issueDate})
@@ -86,6 +97,7 @@ const CertificateSection = () => {
                   borderRadius: "15px",
                   padding: 1,
                   width: "220px",
+                  fontFamily: "'Share Tech', sans-serif"
                 }}
               >
                 {item.about}
@@ -101,7 +113,7 @@ const CertificateSection = () => {
               ></Box>
               <Box sx={{ display: "flex", flexDirection: "column", mt: 1 }}>
                 <img
-                  src={item.certificateImage}
+                  src={item.certificateImage?item.certificateImage:emptyImage}
                   alt={"profile image"}
                   style={{
                     width: "560px",
