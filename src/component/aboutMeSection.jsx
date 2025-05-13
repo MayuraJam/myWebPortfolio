@@ -165,7 +165,7 @@ const AboutMeSection = () => {
                     },
                   }}
                 >
-                  react.Js
+                  React.Js
                 </Typography>
                 <Typography
                   sx={{

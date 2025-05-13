@@ -18,7 +18,7 @@ export const skills = [
     skillId: 1,
     skillType: "Programming Languages",
     skillIcon: "/image/skillIcon/programming-language.png",
-    skillList: ["C", "#C", "JavaScript", "TypeScript", "Dart"],
+    skillList: ["C", "C#", "JavaScript", "TypeScript", "Dart"],
   },
   {
     skillId: 2,
@@ -109,7 +109,7 @@ export const projectData = [
       "/image/project2/payment.png",
       "/image/project2/payment_card.png",
       "/image/project2/action_modal.png",
-       "/image/project2/member_point.png",
+      "/image/project2/member_point.png",
       "/image/project2/table_status.png",
       "/image/project2/order_approve.png",
       "/image/project2/order_process.png",
@@ -134,7 +134,6 @@ export const projectData = [
       "/image/project3/apiResturant6.png",
       "/image/project3/apiResturant7.png",
       "/image/project3/ER_diagram_JP_rest.png",
-
     ],
     link: "https://github.com/MayuraJam/japanese_restaurant_api/tree/main/basic_JWT_project",
     timeline: "8 July 2024 - 4 Nov 2024",
@@ -142,7 +141,8 @@ export const projectData = [
   {
     projectId: 4,
     projectName: "Flea Market lock booking system",
-    projectDescription: "This program is develop for use on the Window OS.It is a system for managing flea market booking system. this progeram have two user role (staff and flea maket owner). For staff core feature include (Manageing vendor information , Reserving flear market (performed by staff) , Viewing all reservation records , Payment system , Managing fines) and  flea maket owner core feature include (Checking vendor information , Viewing all reservation records , Managing flea market data). This program is use by authorized staff only.",
+    projectDescription:
+      "This program is develop for use on the Window OS.It is a system for managing flea market booking system. this progeram have two user role (staff and flea maket owner). For staff core feature include (Manageing vendor information , Reserving flear market (performed by staff) , Viewing all reservation records , Payment system , Managing fines) and  flea maket owner core feature include (Checking vendor information , Viewing all reservation records , Managing flea market data). This program is use by authorized staff only.",
     role: "developer",
     tools: ["C# window app", "SQL server"],
     projectType: "desktop application",
