@@ -104,7 +104,7 @@ const ProfileSection = () => {
                   Contact Me
                 </Typography>
                 <a
-                  href="https://github.com/MayuraJam?tab=repositories"
+                  href="https://github.com/MayuraJam"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}

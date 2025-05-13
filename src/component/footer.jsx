@@ -97,7 +97,7 @@ const FooterSction = () => {
         >
           <Box sx={{ display: "flex", gap: 3, mt: 2 }}>
             <a
-              href="https://github.com/MayuraJam?tab=repositories"
+              href="https://github.com/MayuraJam"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
