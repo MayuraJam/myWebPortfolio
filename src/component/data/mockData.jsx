@@ -22,7 +22,7 @@ export const skills = [
   },
   {
     skillId: 2,
-    skillType: "Frontend Framwork",
+    skillType: "Frontend Framework",
     skillIcon: "/image/skillIcon/web-design.png",
     skillList: [
       "Next.js",
@@ -35,7 +35,7 @@ export const skills = [
   },
   {
     skillId: 3,
-    skillType: "Backend Framwork",
+    skillType: "Backend Framework",
     skillIcon: "/image/skillIcon/back-end.png",
     skillList: [".Net core", "Node.js", "Express"],
   },
