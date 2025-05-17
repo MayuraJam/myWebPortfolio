@@ -8,11 +8,18 @@ import linkedInImg from "./asset/image/icon/linkedin.png";
 import laptopWithProgrammingImg from "./asset/image/icon/programming.png";
 import { Element } from "react-scroll";
 import IconButtonComponent from "./IconButton";
+import backgroundImg from "./asset/image/docker3-removebg.png";
 
 const ProfileSection = () => {
   return (
     <Element name="profile">
-      <Box sx={{ padding: "110px", paddingTop: "200px" }} id="profile">
+      <Box
+        sx={{
+          padding: "110px",
+          paddingTop: "200px",
+        }}
+        id="profile"
+      >
         <Grid
           container
           spacing={2}
@@ -34,14 +41,18 @@ const ProfileSection = () => {
               </Typography>
               <Typography
                 variant="h1"
-                sx={{ fontWeight: "bold", lineHeight: "4.5rem",fontFamily: "'Share Tech', sans-serif" }}
+                sx={{
+                  fontWeight: "bold",
+                  lineHeight: "4.5rem",
+                  fontFamily: "'Share Tech', sans-serif",
+                }}
               >
                 Mayura{" "}
                 <span
                   style={{
                     textDecoration: "underline",
                     color: colorTheme.greenleft.main,
-                    fontFamily: "'Share Tech', sans-serif"
+                    fontFamily: "'Share Tech', sans-serif",
                   }}
                 >
                   Jampasri
@@ -60,7 +71,7 @@ const ProfileSection = () => {
                     lineHeight: "6rem",
                     fontWeight: "light",
                     color: colorTheme.woodBrown.main,
-                    fontFamily: "'Share Tech', sans-serif"
+                    fontFamily: "'Share Tech', sans-serif",
                   }}
                 >
                   Information Technology Student
@@ -80,7 +91,7 @@ const ProfileSection = () => {
                   lineHeight: "5rem",
                   fontWeight: "light",
                   color: colorTheme.woodBrown.main,
-                  fontFamily: "'Share Tech', sans-serif"
+                  fontFamily: "'Share Tech', sans-serif",
                 }}
               >
                 Welcome to my Portfolio website
@@ -98,7 +109,7 @@ const ProfileSection = () => {
                     borderRadius: "10px",
                     maxWidth: "90px",
                     color: colorTheme.lightPink.main,
-                    fontFamily: "'Share Tech', sans-serif"
+                    fontFamily: "'Share Tech', sans-serif",
                   }}
                 >
                   Contact Me
@@ -159,6 +170,18 @@ const ProfileSection = () => {
                 </IconButtonComponent>
               </Box>
             </Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <img
+                src={backgroundImg}
+                alt={"image"}
+                style={{
+                  width: "400px",
+                  height: "350px",
+                  marginLeft:"30px"
+                }}
+                
+              />
           </Grid>
         </Grid>
       </Box>
