@@ -92,7 +92,7 @@ export const projectData = [
       "/image/project1/11.png",
     ],
     link: "https://github.com/MayuraJam/mockMyKU_app_API",
-    timeline: "20 Apil 2025 - present",
+    timeline: "20 Apil 2025 - 26 May 2025",
   },
   {
     projectId: 2,

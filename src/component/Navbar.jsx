@@ -4,7 +4,7 @@ import { colorTheme } from "../style/theme";
 import "./Navbar.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link } from "react-scroll";
-import resumeFile from "./asset/file/My_resume.pdf";
+import resumeFile from "./asset/file/Mayura_jam_resume.pdf";
 
 import { Button } from "@mui/material";
 import { NotificationDialog } from "./dialog/notificationDialog";
@@ -78,7 +78,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href={resumeFile} download="My-Resume" style={{ textDecoration: "none" }}>
+              <a href={resumeFile} download="Mayura-Jampasri-Resume" style={{ textDecoration: "none" }}>
                 <Button
                   size="large"
                   variant="contained"
