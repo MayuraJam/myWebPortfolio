@@ -18,7 +18,7 @@ export const skills = [
     skillId: 1,
     skillType: "Programming Languages",
     skillIcon: "/image/skillIcon/programming-language.png",
-    skillList: ["C", "C#", "JavaScript", "TypeScript", "Dart"],
+    skillList: ["C", "C#", "JavaScript", "TypeScript"],
   },
   {
     skillId: 2,
@@ -30,7 +30,6 @@ export const skills = [
       "MUI",
       "Bootstrap",
       "Tailwind",
-      "Flutter",
     ],
   },
   {
@@ -43,7 +42,7 @@ export const skills = [
     skillId: 4,
     skillType: "Databases",
     skillIcon: "/image/skillIcon/database.png",
-    skillList: ["SQL server", "PostgreSQL", "MongoDB"],
+    skillList: ["SQL server", "PostgreSQL", "MongoDB","MySQL"],
   },
   {
     skillId: 5,
