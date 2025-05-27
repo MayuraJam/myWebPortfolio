@@ -1,25 +1,16 @@
-import {
-  Box,
-  Typography,
-  Grid,
-  Button,
-  Divider,
-  duration,
-} from "@mui/material";
+import { Box, Typography, Grid, Button, Divider } from "@mui/material";
 import { React, useState } from "react";
 import { colorTheme } from "../style/theme";
-import profile from "./asset/image/profile.jpg";
 import Header from "./Heading";
 import { experienceDetail } from "./data/mockData";
 import { Element, Link } from "react-scroll";
 import transcriptFile from "./asset/file/My_transcript_eng.pdf";
 import { NotificationDialog } from "./dialog/notificationDialog";
-import emptyImage from "./asset/image/icon/empty_img.png";
 import { motion } from "framer-motion";
 import { cardMotionHandler, imageMotionHandler } from "../style/motion";
+import ProfileCard from "./dialog/ProfileCard";
 
 const AboutMeSection = () => {
-  const [openList, setOpenList] = useState(false);
   const [openDownloadNoti, setOpenDownloadNoti] = useState(false);
 
   const handleOpenDownloadNoti = () => {
@@ -37,7 +28,6 @@ const AboutMeSection = () => {
       transition: {
         delay: 0.8,
         staggerChildren: 0.5,
-        
       },
     },
   };
@@ -68,210 +58,7 @@ const AboutMeSection = () => {
               whileInView={"visible"}
               viewport={{ amount: 0.2 }}
             >
-              <Box
-                sx={{
-                  padding: 2,
-                  borderRadius: "15px",
-                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
-                  background: "#FFFDF6",
-                  border: `1px solid ${colorTheme.greenleft.main}`,
-                }}
-              >
-                <Box
-                  component="img"
-                  src={profile ? profile : emptyImage}
-                  alt={"profile image"}
-                  style={{
-                    width: "200px",
-                    height: "230px",
-                    marginBottom: 4,
-                    borderRadius: "100%",
-                    transition: "transform 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                />
-                <Typography
-                  variant="h4"
-                  sx={{
-                    lineHeight: "5rem",
-                    color: colorTheme.woodBrown.main,
-                    fontWeight: "bold",
-                    fontFamily: "'Share Tech', sans-serif",
-                  }}
-                >
-                  Mayura Jampasri
-                </Typography>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    lineHeight: "1rem",
-                    color: colorTheme.woodBrown.main,
-                    mb: 3,
-                    fontFamily: "'Share Tech', sans-serif",
-                  }}
-                >
-                  Information Technology student
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: 2,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignContent: "center",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    front-end
-                  </Typography>
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    back-end
-                  </Typography>
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    full-stack
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: 2,
-                    mt: 2,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignContent: "center",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    React.Js
-                  </Typography>
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    Next.js
-                  </Typography>
-                  <Typography
-                    sx={{
-                      padding: 1.5,
-                      borderRadius: "25px",
-                      maxWidth: "90px",
-                      color: colorTheme.greenleft.main,
-                      border: `1px solid ${colorTheme.greenleft.main}`,
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Share Tech', sans-serif",
-                      "&:hover": {
-                        backgroundColor: colorTheme.greenleft.main,
-                        color: "#ffffff",
-                      },
-                    }}
-                  >
-                    Node.js
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignContent: "center",
-                    mt: 2,
-                  }}
-                >
-                  <Link
-                    to="skills"
-                    style={{ textDecoration: "none" }}
-                    smooth={true}
-                    duration={500}
-                  >
-                    <Typography
-                      sx={{
-                        padding: 1.5,
-                        borderRadius: "25px",
-                        maxWidth: "90px",
-                        color: colorTheme.greenleft.main,
-                        border: `1px solid ${colorTheme.greenleft.main}`,
-                        transition: "all 0.3s ease",
-                        fontFamily: "'Share Tech', sans-serif",
-                        "&:hover": {
-                          backgroundColor: colorTheme.greenleft.main,
-                          color: "#ffffff",
-                        },
-                        cursor: "pointer",
-                      }}
-                    >
-                      and more...
-                    </Typography>
-                  </Link>
-                </Box>
-              </Box>
+              <ProfileCard />
             </motion.div>
           </Grid>
 
