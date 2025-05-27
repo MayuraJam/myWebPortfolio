@@ -5,7 +5,11 @@ import Header from "./Heading";
 import { skills } from "./data/mockData";
 import { Element } from "react-scroll";
 import {motion} from 'framer-motion';
+import { cardMotionHandler, containerMotionHandler } from "../style/motion";
+
 const SkillsSection = () => {
+  
+
   return (
     <Element name="skills">
       <Box
@@ -13,10 +17,14 @@ const SkillsSection = () => {
         id="skills"
       >
         <Header text="Skills" />
+        <motion.div variants={containerMotionHandler}
+         initial="hidden"
+         whileInView={"visible"}
+         viewport={{amount:0.2}}
+         >
         <Grid
           container
           spacing={2}
-          columns={{ xs: 1, sm: 1, md: 3 }}
           direction="row"
           justifyContent="center"
           alignItems="center"
@@ -24,6 +32,7 @@ const SkillsSection = () => {
         >
           {skills.map((item) => (
             <Grid item xs={12} sm={6} md={4} key={item.skillId}>
+              <motion.div variants={cardMotionHandler}>
               <Box
                 sx={{
                   padding: 3,
@@ -95,9 +104,11 @@ const SkillsSection = () => {
                   ))}
                 </Box>
               </Box>
+            </motion.div>
             </Grid>
           ))}
         </Grid>
+        </motion.div>
       </Box>
     </Element>
   );

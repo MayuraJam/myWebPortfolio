@@ -4,8 +4,23 @@ import { colorTheme } from "../style/theme";
 import myLogo from "./asset/image/icon/my-logo.png";
 import { Link } from "react-scroll";
 import IconButtonComponent from "./IconButton";
+import { motion } from "framer-motion";
 
 const FooterSction = () => {
+  const containerListMotionHandler = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemMotionHandler = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
     <footer
       style={{
@@ -68,7 +83,7 @@ const FooterSction = () => {
               color: colorTheme.lightPink.main,
               lineHeight: "3rem",
               fontWeight: "bold",
-              fontFamily: "'Share Tech', sans-serif"
+              fontFamily: "'Share Tech', sans-serif",
             }}
           >
             Mayura Jampasri
@@ -77,7 +92,7 @@ const FooterSction = () => {
             variant="h6"
             sx={{
               color: colorTheme.sakuraPink.main,
-              fontFamily: "'Share Tech', sans-serif"
+              fontFamily: "'Share Tech', sans-serif",
             }}
           >
             "A little progress each day adds up to big results."
@@ -95,7 +110,17 @@ const FooterSction = () => {
             },
           }}
         >
-          <Box sx={{ display: "flex", gap: 3, mt: 2 }}>
+          <motion.div
+            style={{
+              display: "flex",
+              gap: "16px",
+              flexWrap: "wrap",
+            }}
+            variants={containerListMotionHandler}
+            initial="hidden"
+            whileInView={"show"}
+          >
+             <motion.div variants={itemMotionHandler}>
             <a
               href="https://github.com/MayuraJam"
               target="_blank"
@@ -106,6 +131,8 @@ const FooterSction = () => {
                 <i class="bi bi-github icon-contect"></i>
               </IconButtonComponent>
             </a>
+             </motion.div>
+              <motion.div variants={itemMotionHandler}>
             <a
               href="https://www.linkedin.com/in/mayura-jampasri-5293652b1/"
               target="_blank"
@@ -116,13 +143,20 @@ const FooterSction = () => {
                 <i class="bi bi-linkedin icon-contect"></i>
               </IconButtonComponent>
             </a>
+              </motion.div>
+               <motion.div variants={itemMotionHandler}>
             <IconButtonComponent text="maimayura37620@gmail.com">
               <i class="bi bi-envelope icon-contect"></i>
             </IconButtonComponent>
+               </motion.div>
+                <motion.div variants={itemMotionHandler}>
             <IconButtonComponent text="0909845033">
               <i class="bi bi-telephone-fill icon-contect"></i>
             </IconButtonComponent>
-          </Box>
+
+                </motion.div>
+          </motion.div>
+
           <Divider
             sx={{
               borderColor: colorTheme.lightPink.main,
@@ -134,7 +168,7 @@ const FooterSction = () => {
             variant="p"
             sx={{
               color: colorTheme.lightPink.main,
-              fontFamily: "'Share Tech', sans-serif"
+              fontFamily: "'Share Tech', sans-serif",
             }}
           >
             © 2025 Mayura Jampasri | Built with React MUI and CSS

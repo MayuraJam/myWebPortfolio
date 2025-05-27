@@ -10,11 +10,11 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { colorTheme } from "../../style/theme";
-import profile from "../asset/image/profile.jpg";
 import githubImg from "../asset/image/icon/2048px-Octicons-mark-github.png";
 import { BtnSlider } from "./BtnSlider";
 import { Dots } from "./Dots";
 import emptyImage from "../asset/image/icon/empty_img.png";
+import { motion } from "framer-motion";
 
 export const ProjectDialog = ({ open, onClose, data }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
