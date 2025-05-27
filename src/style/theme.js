@@ -1,3 +1,4 @@
+import { lightBlue } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 
@@ -67,6 +68,18 @@ const colorTheme = {
     color: { main: "#D9D9D9" },
     name: "lightGrey",
   }),
+  lightBlue : palette.augmentColor({
+    color:{main:"#BBFBFF"},
+    name:"lightBlue"
+  }),
+  lightGreen :palette.augmentColor({
+    color:{main:"#DBFFCB"},
+    name:"lightGreen"
+  }),
+  lightPurpur :palette.augmentColor({
+    color:{main:"#CDC1FF"},
+    name:"lightPurpur"
+  })
 };
 
 export { colorTheme };

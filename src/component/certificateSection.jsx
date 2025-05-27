@@ -1,5 +1,5 @@
 import { Box, Typography, Grid, Button, Divider } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { colorTheme } from "../style/theme";
 import Header from "./Heading";
 import { certificateData } from "./data/mockData";
@@ -7,7 +7,15 @@ import emptyImage from "./asset/image/icon/empty_img.png";
 import { motion } from "framer-motion";
 import { cardMotionHandler, containerMotionHandler } from "../style/motion";
 
+
+
 const CertificateSection = () => {
+
+  const [data,setData] = useState([]);
+
+  useEffect(() => {
+    setData(certificateData);
+  }, []);
   return (
     <Box
       sx={{ padding: "40px", paddingBottom: "70px", paddingTop: "150px" }}
@@ -47,7 +55,7 @@ const CertificateSection = () => {
           alignItems="center"
           sx={{ mt: 4 }}
         >
-          {certificateData.map((item) => (
+          {data.map((item) => (
             <Grid item xs={12} sm={6} key={item.certificateId}>
               <motion.div variants={cardMotionHandler}>
                 <Box
@@ -107,11 +115,15 @@ const CertificateSection = () => {
                       lineHeight: "1rem",
                       color: colorTheme.woodBrown.main,
                       textAlign: "center",
-                      border: `1px solid ${colorTheme.lightBrown.main}`,
+                      border: `1px solid transparent`,
                       borderRadius: "15px",
                       padding: 1,
                       width: "220px",
                       fontFamily: "'Share Tech', sans-serif",
+                      backgroundColor : item.about.includes("Workshop and training")?
+                      colorTheme.lightPurpur.main:item.about.includes("Internship")?
+                      colorTheme.lightBlue.main:item.about.includes("Test")?
+                      colorTheme.lightPink.main:colorTheme.lightGreen.main
                     }}
                   >
                     {item.about}

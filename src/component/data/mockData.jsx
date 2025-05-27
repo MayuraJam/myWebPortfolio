@@ -163,6 +163,14 @@ export const projectData = [
 export const certificateData = [
   {
     certificateId: 1,
+    certificateName: "Introduction to Go Programming Language",
+    certificateImage: "/image/certificate/borntodev-academy_Introduction to Go Programming Language_certificate.png",
+    issueDate: "27 May 2025",
+    organization: "Born to dev",
+    about: "Workshop and training",
+  },
+  {
+    certificateId: 2,
     certificateName: "Certificate of Internship",
     certificateImage: "/image/certificate/BBVC2.png",
     issueDate: "15 Nov 2024 - 15 Apil 2025",
@@ -170,7 +178,7 @@ export const certificateData = [
     about: "Internship",
   },
   {
-    certificateId: 2,
+    certificateId: 3,
     certificateName: "API Design and Cloud Architecture using Python  ",
     certificateImage: "/image/certificate/240919_213222.jpg",
     issueDate: "7 Sep 2024 - 8 Sep 2024",
@@ -178,7 +186,7 @@ export const certificateData = [
     about: "Workshop and training",
   },
   {
-    certificateId: 3,
+    certificateId: 4,
     certificateName: "Certificate of Internship",
     certificateImage: "/image/certificate/BBVC1.png",
     issueDate: "1 May 2024 - 28 June 2024",
@@ -186,7 +194,7 @@ export const certificateData = [
     about: "Internship",
   },
   {
-    certificateId: 4,
+    certificateId: 5,
     certificateName: "ICDL certificate",
     certificateImage: "/image/certificate/ICDLcer.png",
     issueDate: "19 Dec 2023",
@@ -194,7 +202,7 @@ export const certificateData = [
     about: "Test",
   },
   {
-    certificateId: 5,
+    certificateId: 6,
     certificateName: "KU Digital Literacy",
     certificateImage: "/image/certificate/KU_digital.png",
     issueDate: "3 Oct 2023",
@@ -202,7 +210,7 @@ export const certificateData = [
     about: "Test",
   },
   {
-    certificateId: 6,
+    certificateId: 7,
     certificateName: "Verified certificate of participation",
     certificateImage: "/image/certificate/certificate.png",
     issueDate: "10 Jan 2023",
