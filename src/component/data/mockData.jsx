@@ -13,6 +13,57 @@ export const experienceDetail = [
   },
 ];
 
+export const internProjectDetail = [
+  {
+    id: 1,
+    title: "SHORT INTERNSHIP",
+    period: "1 May 2024 - 15 June 2024 (2 months)",
+    projectName: "Food ordering System",
+    detailList: [
+      "Study how to implement MVC pattern ,basic API design and implement taught by Mantor",
+      "Design API and implement service for a food ordering in customer role",
+      "Implement user interface including ordering food , update order view order data from every restaurant from you order and view customer data",
+    ],
+    techStack: [
+      {
+        toolType: "Front-end",
+        toolNameList: ["React js", "Bootstrap", "JavaScript"],
+      },
+      {
+        toolType: "Back-end",
+        toolNameList: ["C# .net"],
+      },
+      {
+        toolType: "Database",
+        toolNameList: ["SQL server"],
+      },
+    ],
+    position: "Fullstack intern",
+    team: "MAD (Modenized Automation Delivery)"
+  },
+  {
+    id: 2,
+    title: "COOPERATIVE INTERNSHIP",
+    period: "15 Nov 2024 - 15 April 2025 (6 months)",
+    projectName: "Propilot | Skill inventory module",
+    detailList: [
+      "Implement the employee profile management feature which allows edit some detail including management employee profile, change profile image",
+      "Implement dialog select data from profile employee page to show on CV",
+      "Implement preview CV template.",
+      "Implement export power point file.",
+      "Setup Authorization => permission number and role",
+    ],
+    techStack: [
+      {
+        toolType: "Front-end",
+        toolNameList: ["Next js", "MUI", "TypeScript"],
+      },
+    ],
+    position: "Front-end intern",
+    team: "UTEAM (Unicorn team)"
+  },
+];
+
 export const skills = [
   {
     skillId: 1,
@@ -222,5 +273,35 @@ export const certificateData = [
     issueDate: "10 Jan 2023",
     organization: "Born to dev",
     about: "DevLab",
+  },
+];
+
+export const softSkillList = [
+  "Teamwork",
+  "Communication",
+  "Problem solving",
+  "Adaptability",
+  "Fast leaning",
+  "Time management",
+  "Work underpresser",
+  "Presentation",
+];
+
+export const hardSkillList = [
+  {
+    toolType: "Front-end",
+    toolNameList: ["React js","Next js", "MUI","JavaScript" ,"TypeScript","Zustand"],
+  },
+  {
+    toolType: "Back-end",
+    toolNameList: ["C# .net"],
+  },
+  {
+    toolType: "Database",
+    toolNameList: ["Sql server"],
+  },
+  {
+    toolType: "Team work Tools",
+    toolNameList: ["Git (Fork)","Postman","Microsoft Team","Azure devops", ],
   },
 ];

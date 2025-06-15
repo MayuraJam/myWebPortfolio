@@ -1,8 +1,9 @@
 import { colorTheme } from "../../style/theme";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import emptyImage from "../asset/image/icon/empty_img.png";
 import { truncateText } from "../ProjectSection";
+import "../Navbar.css";
 
 const ProjectSectionCard = ({ data }) => {
   return (
@@ -13,7 +14,7 @@ const ProjectSectionCard = ({ data }) => {
         background: "#FFFDF6",
         border: `1px solid ${colorTheme.lightGrey.main}`,
         transition: "all 0.3s ease",
-        width: "600px",
+        maxWidth: "600px",
         cursor: "pointer",
         "&:hover": {
           border: `2px solid ${colorTheme.greenleft.main}`,
@@ -31,7 +32,7 @@ const ProjectSectionCard = ({ data }) => {
           fontFamily: "'Share Tech', sans-serif",
         }}
       >
-        {data.projectName?data.projectName : "projectName"}
+        {data.projectName ? data.projectName : "projectName"}
       </Typography>
       <Typography
         variant="h6"
@@ -43,7 +44,9 @@ const ProjectSectionCard = ({ data }) => {
           fontFamily: "'Share Tech', sans-serif",
         }}
       >
-        {truncateText(data.projectDescription, 200)?truncateText(data.projectDescription, 200):"project description"}
+        {truncateText(data.projectDescription, 200)
+          ? truncateText(data.projectDescription, 200)
+          : "project description"}
       </Typography>
       <Box
         sx={{
@@ -54,30 +57,30 @@ const ProjectSectionCard = ({ data }) => {
           alignContent: "start",
         }}
       >
-        {data.tools && data.tools.length > 0? (
-        <>
-        {data.tools.map((tool, index) => (
-          <Typography
-            key={index}
-            sx={{
-              borderRadius: "25px",
-              maxWidth: "200px",
-              color: colorTheme.greenleft.main,
-              border: `1px solid ${colorTheme.greenleft.main}`,
-              padding: "5px 10px",
-              transition: "all 0.3s ease",
-              fontFamily: "'Share Tech', sans-serif",
-              "&:hover": {
-                backgroundColor: colorTheme.greenleft.main,
-                color: "#ffffff",
-              },
-            }}
-          >
-            {tool}
-          </Typography>
-        ))}
-        </>
-      ):null}
+        {data.tools && data.tools.length > 0 ? (
+          <>
+            {data.tools.map((tool, index) => (
+              <Typography
+                key={index}
+                sx={{
+                  borderRadius: "25px",
+                  maxWidth: "200px",
+                  color: colorTheme.greenleft.main,
+                  border: `1px solid ${colorTheme.greenleft.main}`,
+                  padding: "5px 10px",
+                  transition: "all 0.3s ease",
+                  fontFamily: "'Share Tech', sans-serif",
+                  "&:hover": {
+                    backgroundColor: colorTheme.greenleft.main,
+                    color: "#ffffff",
+                  },
+                }}
+              >
+                {tool}
+              </Typography>
+            ))}
+          </>
+        ) : null}
       </Box>
       <Box sx={{ display: "flex", flexDirection: "column", mt: 2 }}>
         <Box sx={{ position: "relative", display: "inline-block" }}>
@@ -85,9 +88,9 @@ const ProjectSectionCard = ({ data }) => {
             src={data.projectImage[0] ? data.projectImage[0] : emptyImage}
             alt={"profile image"}
             style={{
-              width: "560px",
-              height: "400px",
               borderRadius: "15px",
+              height:"400px",
+              width:"560px",
               marginBottom: 4,
               marginTop: "20px",
               overflow: "hidden",
@@ -111,7 +114,7 @@ const ProjectSectionCard = ({ data }) => {
               fontFamily: "'Share Tech', sans-serif",
             }}
           >
-            {data.projectType?data.projectType:""}
+            {data.projectType ? data.projectType : ""}
           </Typography>
         </Box>
       </Box>

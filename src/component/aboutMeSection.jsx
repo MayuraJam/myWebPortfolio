@@ -9,9 +9,11 @@ import { NotificationDialog } from "./dialog/notificationDialog";
 import { motion } from "framer-motion";
 import { cardMotionHandler, imageMotionHandler } from "../style/motion";
 import ProfileCard from "./dialog/ProfileCard";
+import { ExperinceDialog } from "./dialog/ExperienceDialog";
 
 const AboutMeSection = () => {
   const [openDownloadNoti, setOpenDownloadNoti] = useState(false);
+  const [openExperienceDialog,setOpenExperienceDialog] = useState(false);
 
   const handleOpenDownloadNoti = () => {
     setOpenDownloadNoti(true);
@@ -19,6 +21,13 @@ const AboutMeSection = () => {
   const handleCloseDownLoadNoti = (event, reason) => {
     if (reason === "clickaway") return;
     setOpenDownloadNoti(false);
+  };
+
+  const handleOpenDialog = () => {
+    setOpenExperienceDialog(true);
+  };
+  const handleCloseDialog = () => {
+    setOpenExperienceDialog(false);
   };
 
   const containerListMotionHandler = {
@@ -210,7 +219,9 @@ const AboutMeSection = () => {
                           px: 5,
                           borderRadius: "15px",
                           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
+                          cursor:"pointer"
                         }}
+                        onClick={handleOpenDialog}
                       >
                         <Typography
                           variant="h5"
@@ -270,6 +281,10 @@ const AboutMeSection = () => {
           massage="Download Transcript sucess !!!"
           status="success"
         />
+        <ExperinceDialog
+        open={openExperienceDialog}
+        onClose={handleCloseDialog }
+         />
       </Box>
     </Element>
   );
